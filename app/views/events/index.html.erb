@@ -1,0 +1,9 @@
+Events
+<% @events.each do |event| %>
+  <div class="card">
+    <h3><%= event.user.name %></h3>
+    <p><%= event.name %></p>
+    <p><%= event.event_date %></p>
+    <p><%= event.address %></p>
+  </div>
+<% end %>
