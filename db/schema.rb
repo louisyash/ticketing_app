@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_24_133208) do
+ActiveRecord::Schema.define(version: 2021_12_27_093335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,15 @@ ActiveRecord::Schema.define(version: 2021_12_24_133208) do
     t.index ["user_id"], name: "index_events_on_user_id"
   end
 
+  create_table "tickets", force: :cascade do |t|
+    t.bigint "event_id", null: false
+    t.float "price"
+    t.string "seat"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["event_id"], name: "index_tickets_on_event_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -40,4 +49,5 @@ ActiveRecord::Schema.define(version: 2021_12_24_133208) do
   end
 
   add_foreign_key "events", "users"
+  add_foreign_key "tickets", "events"
 end
