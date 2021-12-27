@@ -7,6 +7,7 @@ class CreateEvents < ActiveRecord::Migration[6.0]
       t.float :longitude
       t.float :latitude
       t.references :user, null: false, foreign_key: true
+      t.string :photo_url
 
       t.timestamps
     end
