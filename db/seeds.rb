@@ -23,3 +23,5 @@ puts "creating events..."
 5.times do
   Event.create!(name: event_names.sample, address: address_list.sample, user: users.sample, event_date: DateTime.now - 3000)
 end
+
+puts "Created #{User.count} users, #{Event.count} events, and #{Ticket.count} tickets."
