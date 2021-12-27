@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2021_12_27_093335) do
     t.bigint "event_id", null: false
     t.float "price"
     t.string "seat"
+    t.string "photo_url"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["event_id"], name: "index_tickets_on_event_id"
