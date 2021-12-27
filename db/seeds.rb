@@ -10,11 +10,11 @@ address_list = ["Tokyo Tower", "Niigata", "3338 Vicente Street", "Tokyo Dome", "
 
 puts "creating users..."
 
-louis = User.create!(email: "louis@test.com", password:"123456")
-john = User.create!(email: "john@test.com", password:"123456")
-bobby = User.create!(email: "bobby@test.com", password:"123456")
-richard = User.create!(email: "richard@test.com", password:"123456")
-harrison = User.create!(email: "harrison@test.com", password:"123456")
+louis = User.create!(email: "louis@test.com", password:"123456", name: "Louis Yasuhiro")
+john = User.create!(email: "john@test.com", password:"123456", name: "John Doe")
+bobby = User.create!(email: "bobby@test.com", password:"123456", name: "Bobby Jackson")
+richard = User.create!(email: "richard@test.com", password:"123456", name: "Richard Nickson")
+harrison = User.create!(email: "harrison@test.com", password:"123456", name: "Harrison Ford")
 
 users = [louis, john, bobby, richard, harrison]
 
