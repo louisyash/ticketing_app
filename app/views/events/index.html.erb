@@ -2,7 +2,6 @@
   <h2>Events</h2>
   <% @events.each do |event| %>
     <div class="card-trip">
-      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
       <div class="card-trip-infos">
         <div>
           <h2><%= event.user.name %></h2>
@@ -12,6 +11,7 @@
         </div>
         <h2 class="card-trip-pricing">$99.99</h2>
       </div>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
     </div>
   <% end %>
 </div>
