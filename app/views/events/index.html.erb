@@ -1,9 +1,17 @@
-Events
-<% @events.each do |event| %>
-  <div class="card">
-    <h3><%= event.user.name %></h3>
-    <p><%= event.name %></p>
-    <p><%= event.event_date %></p>
-    <p><%= event.address %></p>
-  </div>
-<% end %>
+<div class="container">
+  <h2>Events</h2>
+  <% @events.each do |event| %>
+    <div class="card-trip">
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= event.user.name %></h2>
+          <p><%= event.name %></p>
+          <p><%= event.event_date %></p>
+          <p><%= event.address %></p>
+        </div>
+        <h2 class="card-trip-pricing"></h2>
+      </div>
+      <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+    </div>
+  <% end %>
+</div>
