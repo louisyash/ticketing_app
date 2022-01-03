@@ -2,12 +2,13 @@
   <div class="container">
     <h1><%= @event.user.name %></h1>
     <p><%= @event.name %></p>
+    <%= link_to "Buy Ticket", events_path, class:"btn btn-primary" %>
   </div>
 </div>
 <div class="container d-flex">
   <div class="event-card">
-    <p><%= @event.event_date %></p>
-    <p><%= @event.address %></p>
+    <p>Date: <%= @event.event_date %></p>
+    <p>Location: <%= @event.address %></p>
     <p>Ticket price</p>
   </div>
   <div class="event-card">
