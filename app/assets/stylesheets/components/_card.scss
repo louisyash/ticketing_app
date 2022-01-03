@@ -41,3 +41,22 @@
   top: -20px;
   width: 40px;
 }
+
+.event-card {
+  height:40vh;
+  width: 50%;
+  background-color: grey;
+  border-radius: 4px;
+  box-shadow: 0,1px,3px;
+  border: solid;
+  margin: 1em;
+  padding: 2em;
+}
+
+.no-deco {
+  text-decoration: none;
+}
+
+.no-deco:hover {
+  text-decoration: none;
+}
