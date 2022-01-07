@@ -2,12 +2,12 @@
   <div class="container">
     <h1><%= @event.user.artist_name %></h1>
     <p><%= @event.name %></p>
-    <%= link_to "チケット購入", events_path, class:"btn btn-primary" %>
+    <%= link_to "チケット購入", events_path, class:"btn btn-primary w-25" %>
   </div>
 </div>
 <div class="container d-flex">
   <div class="event-card">
-    <p>日程: <%= @event.event_date %></p>
+    <p>日程: <%= @event.event_date.strftime("%Y年%m月%d日　開演: %H:%M")  %></p>
     <p>会場: <%= @event.address %></p>
     <p>チケット価格：</p>
   </div>
