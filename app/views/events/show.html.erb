@@ -1,15 +1,15 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://spice.eplus.jp/images/QiPJZGnt6ndIsc3EqaHuShgFdwgBJOLCKzew99Ri428gPAXENfUP0px8zFQyqdxS);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @event.photo_url %>);">
   <div class="container">
-    <h1><%= @event.user.name %></h1>
+    <h1><%= @event.user.artist_name %></h1>
     <p><%= @event.name %></p>
-    <%= link_to "Buy Ticket", events_path, class:"btn btn-primary" %>
+    <%= link_to "チケット購入", events_path, class:"btn btn-primary" %>
   </div>
 </div>
 <div class="container d-flex">
   <div class="event-card">
-    <p>Date: <%= @event.event_date %></p>
-    <p>Location: <%= @event.address %></p>
-    <p>Ticket price</p>
+    <p>日程: <%= @event.event_date %></p>
+    <p>会場: <%= @event.address %></p>
+    <p>チケット価格：</p>
   </div>
   <div class="event-card">
     MAP

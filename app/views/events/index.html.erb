@@ -17,14 +17,18 @@
       <div class="card-trip no-deco">
         <div class="card-trip-infos no-deco">
           <div>
-            <h2><%= event.user.name %></h2>
+            <h2><%= event.user.artist_name %></h2>
             <p><%= event.name %></p>
             <p><%= event.event_date %></p>
             <p><i class="fas fa-map-marker-alt"></i> <%= event.address %></p>
           </div>
           <h2 class="card-trip-pricing"></h2>
         </div>
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <% if event.photo_url %>
+          <%= image_tag event.photo_url, alt: "stuff" %>
+        <% else %>
+          <img src="https://spice.eplus.jp/images/QiPJZGnt6ndIsc3EqaHuShgFdwgBJOLCKzew99Ri428gPAXENfUP0px8zFQyqdxS" />
+        <% end %>
       </div>
     <% end %>
   <% end %>
