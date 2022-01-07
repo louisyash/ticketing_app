@@ -1,14 +1,26 @@
 <div class="container">
   <h2>Events</h2>
+  <%= form_tag events_path, method: :get do %>
+    <div class="form d-flex mt-2" style="">
+      <%= text_field_tag :query,
+      params[:query],
+      class: "form-control",
+      placeholder: "artist, genre, or location"
+      %>
+    <% end %>
+    <%= button_tag(type: "Search", class: "btn btn-primary") do %>
+      <i class="fas fa-search"></i>
+    <% end %>
+  </div>
   <% @events.each do |event| %>
     <%= link_to event_path(event) do %>
       <div class="card-trip no-deco">
-        <div class="card-trip-infos">
+        <div class="card-trip-infos no-deco">
           <div>
             <h2><%= event.user.name %></h2>
             <p><%= event.name %></p>
             <p><%= event.event_date %></p>
-            <p><%= event.address %></p>
+            <p><i class="fas fa-map-marker-alt"></i> <%= event.address %></p>
           </div>
           <h2 class="card-trip-pricing"></h2>
         </div>
