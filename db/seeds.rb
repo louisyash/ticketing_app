@@ -10,13 +10,14 @@ address_list = ["Tokyo Tower", "Niigata", "3338 Vicente Street", "Tokyo Dome", "
 
 puts "creating users..."
 
-louis = User.create!(email: "louis@test.com", password:"123456", name: "Louis Yasuhiro")
-john = User.create!(email: "john@test.com", password:"123456", name: "John Doe")
-bobby = User.create!(email: "bobby@test.com", password:"123456", name: "Bobby Jackson")
-richard = User.create!(email: "richard@test.com", password:"123456", name: "Richard Nickson")
-harrison = User.create!(email: "harrison@test.com", password:"123456", name: "Harrison Ford")
+louis = User.create!(email: "louis@test.com", password:"123456", name: "Louis Yasuhiro", artist_name: "Flyers")
+lisa = User.create!(email: "lisa@test.com", password:"123456", name: "Lisa Nemoto", artist_name:"LiSA")
+ayase = User.create!(email: "ayase@test.com", password:"123456", name: "Ayase", artist_name:"YOASOBI")
+lila = User.create!(email: "lila@test.com", password:"123456", name: "Lila Ikuta", artist_name:"YOASOBI")
+manatsu = User.create!(email: "nogizaka@test.com", password:"123456", name: "Manatsu Akimoto", artist_name: "乃木坂46")
+sho = User.create!(email: "sho@test.com", password:"123456", name: "Sho Sakurai", artist_name: "嵐")
 
-users = [louis, john, bobby, richard, harrison]
+users = [louis, lisa, ayase, lila, manatsu, sho]
 
 puts "creating events..."
 
