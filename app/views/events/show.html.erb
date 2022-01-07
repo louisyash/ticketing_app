@@ -1,6 +1,6 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(<%= @event.photo_url %>);">
   <div class="container">
-    <h1><%= @event.user.name %></h1>
+    <h1><%= @event.user.artist_name %></h1>
     <p><%= @event.name %></p>
     <%= link_to "チケット購入", events_path, class:"btn btn-primary" %>
   </div>

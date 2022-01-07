@@ -5,8 +5,6 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-event_names = ["Abaho Ladies", "Testing Event", "Crash Shibuya", "年末コンサート", "Awe yeah baby"]
-address_list = ["Tokyo Tower", "Niigata", "3338 Vicente Street", "Tokyo Dome", "3456 Lombard Street", "Ferry Building"]
 
 puts "creating users..."
 
@@ -26,12 +24,19 @@ japanese_band = "https://spice.eplus.jp/images/QiPJZGnt6ndIsc3EqaHuShgFdwgBJOLCK
 nogizaka = "https://urbanlife.tokyo/wp-content/uploads/2020/02/200220_idol_01.jpg"
 visual_kei = "https://crimsonlotus.eu/wp-content/uploads/2021/04/ran-1400x800.jpg"
 boy_band = "https://storage.mantan-web.jp/images/2015/12/25/20151225dog00m200031000c/001_size6.jpg"
+lisa_photo = "https://img2.animatetimes.com/2020/10/5f7c0e5bd431e_6c6274ea83efbe0492202ea0f49dd74e.jpg"
 
 pictures = [yoasobi, japanese_band, nogizaka, visual_kei, boy_band]
+event_names = ["サムライスピリット君へ", "Fly Away - 2022 - ","新春爆上げコンサート", "１０周年〜Revival for you〜", "武道館〜Nice to meet you〜", "年末コンサート2022", "Eternal Destiny"]
+address_list = ["日本武道館", "横浜スタジアム", "味の素スタジアム", "ペイペイドーム", "札幌ドーム", "埼玉アリーナ"]
 
-10.times do
-  Event.create!(name: event_names.sample, address: address_list.sample, user: users.sample, event_date: DateTime.now - 3000, photo_url: pictures.sample)
-end
+Event.create!(name: event_names[0], address: address_list.sample, user: louis, event_date: DateTime.now - 3000, photo_url: japanese_band)
+Event.create!(name: event_names[1], address: address_list.sample, user: lisa, event_date: DateTime.now - 2000, photo_url: lisa_photo)
+Event.create!(name: event_names[2], address: address_list.sample, user: ayase, event_date: DateTime.now - 1000, photo_url: yoasobi)
+Event.create!(name: event_names[4], address: address_list.sample, user: manatsu, event_date: DateTime.now + 200, photo_url: nogizaka)
+Event.create!(name: event_names[5], address: address_list.sample, user: sho, event_date: DateTime.now + 60, photo_url: boy_band)
+Event.create!(name: event_names[6], address: address_list.sample, user: lisa, event_date: DateTime.now + 80, photo_url: lisa_photo)
+Event.create!(name: event_names[3], address: address_list.sample, user: lila, event_date: DateTime.now + 100, photo_url: yoasobi)
 
 puts "creating tickets..."
 
