@@ -19,7 +19,7 @@
           <div>
             <h2><%= event.user.artist_name %></h2>
             <p><%= event.name %></p>
-            <p><%= event.event_date %></p>
+            <p><i class="far fa-calendar"></i> <%= event.event_date.strftime("%Y年%m月%d日") %></p>
             <p><i class="fas fa-map-marker-alt"></i> <%= event.address %></p>
           </div>
           <h2 class="card-trip-pricing"></h2>
