@@ -11,7 +11,8 @@
     <p>会場: <%= @event.address %></p>
     <p>チケット価格：</p>
   </div>
-  <div class="event-card">
-    MAP
+  <div id="map" class="map-card"
+     data-markers="<%= @markers.to_json %>"
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
 </div>
