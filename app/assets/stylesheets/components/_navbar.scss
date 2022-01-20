@@ -11,12 +11,14 @@
   width: 40px;
 }
 .nav-button {
-  border: solid, 1px;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 8px;
-  margin: 4px;
+  color: white;
+  display: block;
 }
 
 .nav-button:hover {
   text-decoration: none;
+  background: white;
+  transition: 1s;
 }
